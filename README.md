@@ -16,3 +16,9 @@ Vérifie toutes les ~8 s, donc bien avant les notifications Leboncoin.
 Leboncoin protège son API (DataDome). Lance-le depuis ta connexion perso, pas depuis un serveur/VPN.
 En cas d'erreur 403 répétée, laisse un peu de temps ou augmente `POLL_SECONDS`.
 Le code n'a pas pu être testé en réel depuis l'environnement de développement : dis-moi ce que ça affiche au 1er lancement.
+
+## Version navigateur (si le script renvoie 403)
+    pip3 install -r requirements.txt
+    python3 -m playwright install chromium
+    NTFY_TOPIC=ton-topic python3 tracker_browser.py
+Une fenêtre Chromium s'ouvre et recharge la recherche. Laisse-la ouverte (tu peux la mettre en arrière-plan).
